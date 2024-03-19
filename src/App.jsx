@@ -1,7 +1,7 @@
 import "./App.css";
 
 function App() {
-  return <div></div>;
+  return <div className="w-screen h-screen bg-gray-100"></div>;
 }
 
 export default App;
