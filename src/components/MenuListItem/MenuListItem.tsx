@@ -1,19 +1,19 @@
-import { useNavigate } from 'react-router-dom'
-import { MenuListItemType } from './MenuListItem.types.ts'
-import { getCorrectColorOfTemperature } from './MenuListItem.helpers.ts'
+import { useNavigate } from "react-router-dom";
+import { MenuListItemType } from "./MenuListItem.types";
+import { getCorrectColorOfTemperature } from "./MenuListItem.helpers";
 
 export const MenuListItem = ({
   name,
   available,
   targetTemperature,
   moduleId,
-  actualTemperature
+  actualTemperature,
 }: MenuListItemType) => {
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
   const routeChange = () => {
-    navigate(`/modules/${moduleId}`)
-  }
+    navigate(`/modules/${moduleId}`);
+  };
 
   return (
     <div
@@ -32,7 +32,7 @@ export const MenuListItem = ({
           <p
             className={getCorrectColorOfTemperature(
               actualTemperature,
-              targetTemperature
+              targetTemperature,
             )}
           >
             <div className="w-4 flex items-center pl-2">
@@ -42,5 +42,5 @@ export const MenuListItem = ({
         </div>
       )}
     </div>
-  )
-}
+  );
+};
