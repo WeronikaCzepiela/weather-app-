@@ -11,14 +11,14 @@ export const MenuListItem = ({
 }: MenuListItemType) => {
   let navigate = useNavigate();
 
-  const routeChange = () => {
-    navigate(`/modules/${moduleId}`);
-  };
+  // const routeChange = () => {
+  //   navigate(`/modules/${moduleId}`);
+  // };
 
   return (
     <div
       className="bg-[#545850] w-80 h-40 flex flex-col justify-center items-center border border-[#252C29] rounded-xl font-semibold text-[#E5E1DC] active:bg-[#37423D] hover:bg-[#706E63]"
-      onClick={routeChange}
+      // onClick={routeChange}
     >
       <p>{name}</p>
       <p>Is Available: {String(available)}</p>
